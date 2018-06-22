@@ -9,6 +9,8 @@ typedef struct
 }Empleado;
 
 Empleado* Empleado_new();
+
+
 void Empleado_delete();
 
 int Empleado_setId(Empleado* this,char* id);
@@ -22,5 +24,7 @@ int Empleado_getHorasTrabajadas(Empleado* this,char* horasTrabajadas);
 
 int Empleado_setSueldo(Empleado* this,char* sueldo);
 int Empleado_getSueldo(Empleado* this,char* sueldo);
+
+void em_calcularSueldo(void *p);
 
 #endif // EMPLEADO_H_INCLUDED

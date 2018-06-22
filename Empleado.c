@@ -4,6 +4,37 @@
 #include <string.h>
 
 void em_calcularSueldo(void *p)
+{
+    char horasTrabajadas[50];
+    int aux;
+    if(!Empleado_getHorasTrabajadas(p, horasTrabajadas))
+    {
+        aux = atoi(horasTrabajadas);
+
+        if(aux<120)
+        {
+            aux=aux*180;
+            horasTrabajadas
+            Empleado_setSueldo(p, horasTrabajadas);
+            return 0;
+        }
+
+        else if(aux>120 && aux< 160)
+        {
+        horasTrabajadas=((aux-120)*240)+(120*180);
+        Empleado_setSueldo(p, horasTrabajadas);
+        return 0;
+        }
+
+        else if(aux>160)
+        {
+        aux=((aux-160)*350+(40*240)+(120*180));
+
+        }
+    }
+
+
+}
 
 Empleado* Empleado_new()
 {
